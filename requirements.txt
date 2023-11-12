@@ -1,4 +1,7 @@
 Python==3.10.12
 Flask==2.3.3
 Werkzeug==2.3.7
+<<<<<<< HEAD
 gunicorn==21.2.0
+=======
+>>>>>>> origin/master
