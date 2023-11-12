@@ -18,6 +18,7 @@ def index():
     # shows first carrier
     return render_template("index.html", result=result)
 
+
 if __name__ == "__main__":
     app.run(debug=True)
 # A carrier, in the context of cellular technology is a company that provides mobile services.
