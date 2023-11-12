@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Carrier Lookup</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 200px;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            color: #61dafb;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #333; /* Dark gray for the form background */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #444; /* Darker gray for the input background */
+            color: white;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ccc; /* Light gray for the result text */
+        }
+    </style>
+</head>
+<body>
+    <h1>Phone Carrier Lookup</h1>
+    <form method="post">
+        <label for="ph_number">Enter your phone number:</label>
+        <input type="text" id="ph_number" name="ph_number" placeholder="e.g., +1234567890" required>
+        <button type="submit">Lookup Carrier</button>
+    </form>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
