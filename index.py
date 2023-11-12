@@ -13,7 +13,7 @@ def index():
         phone = phonenumbers.parse(ph_number)
 
         carrier_name = carrier.name_for_number(phone, "en")
-        result = f"The carrier for {ph_number} is: {carrier_name}"
+        result = f"The first carrier for {ph_number} is: {carrier_name}"
 
     # shows first carrier
     return render_template("index.html", result=result)
