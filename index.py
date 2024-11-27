@@ -12,6 +12,7 @@ def index():
         ph_number = request.form["ph_number"]
         phone = phonenumbers.parse(ph_number)
 
+        # A carrier, in the context of cellular technology is a company that provides mobile services.
         carrier_name = carrier.name_for_number(phone, "en")
         result = f"The first carrier for {ph_number} is: {carrier_name}"
 
@@ -21,4 +22,3 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
-# A carrier, in the context of cellular technology is a company that provides mobile services.
